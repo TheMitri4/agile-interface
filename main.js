@@ -24,7 +24,10 @@ Agile.prototype.getSprint = function(storyPoints){
 		if(item.storyPoints <= max){
 			sprint.push(item);
 			max -= item.storyPoints;
-			sprintItemsWrapper.appendChild(backlogTasks[i]);
+			console.log(backlogTasks);
+			backlogTasks[i].classList.add('task__hidden');
+			setTimeout(function(){sprintItemsWrapper.appendChild(backlogTasks[i])}, 400);
+			setTimeout(function(){backlogTasks[i].classList.remove('task__hidden')}, 500);
 		}
 		else{
 			acc.push(item);
