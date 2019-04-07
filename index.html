@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Agile</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="main-header__wrapper">
+		<header class="main-header container">
+			<h2 class="main-header__title">Agile</h2>
+		</header>
+	</div>
+	<main>
+		<section class="backlog container">
+			<h2 class="backlog__title">Backlog</h2>
+			<div class="backlog__items-wrapper">
+			</div>
+		</section>
+		<section class="addtask container">
+			<h2 class="addtask__title">Добавить задачу</h2>
+			<div class="addtask__inputs-wrapper">
+				<label class="addtask__label">Имя: <input class="addtask__input" type="text" name="task-name"></label>
+				<label class="addtask__label">Сложность: <input class="addtask__input" type="number" min="1" name="task-storypoints"></label>
+			</div>
+			<button class="addtask__button btn">Добавить</button>
+		</section>
+		<section class="sprint container">
+			<h2 class="sprint__title">Sprint</h2>
+			<label class="sprint__label">Поинты: <input class="addtask__input" type="number" min="1" name="sprint-storypoints"></label>
+			<button class="sprint__button btn">Получить</button>
+			<div class="sprint__items-wrapper"></div>
+		</section>
+	</main>
+	<script src="main.js"></script>
+</body>
+</html>
