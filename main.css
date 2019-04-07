@@ -27,6 +27,8 @@ body{
 	background-color: #f6f5f3;
 	font-size: 16px;
 	font-family: "Open sans", Arial, sans-serif;
+	overflow-x: hidden;
+	min-height: 100vh;
 }
 
 .container{
@@ -72,7 +74,7 @@ body{
 }
 
 .backlog{
-	min-height: 303px;
+/*	min-height: 313px;*/
 	padding-top: 40px;
 	margin-bottom: 40px;
 	background-color: #fff;
@@ -83,7 +85,7 @@ body{
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 	text-transform: uppercase;
 }
 
@@ -172,7 +174,7 @@ body{
 }
 
 .sprint{
-	min-height: 434px;
+/*	min-height: 434px;*/
 	padding-top: 40px;
 	background-color: #fff;
 	box-shadow: 0 1px 4px 0 rgba(32,33,36,0.28);
