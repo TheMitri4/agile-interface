@@ -85,31 +85,40 @@ body{
 
 .backlog__items-wrapper{
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 	flex-wrap: wrap;
+	padding-left: 53px;
+	margin-right: -97px;
 }
 
-.backlog__item{
+.task{
 	box-sizing: border-box;
 	background-color: #fff;
 	width: 220px;
 	height: 220px;
 	margin-bottom: 10px;
 	box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+	transition: opacity 0.5s;
+	margin-right: 97px;
+	margin-bottom: 20px;
 }
 
-.backlog__item-title{
+.task__hidden{
+	opacity: 0;
+}
+
+.task__title{
 	text-align: center;
 	font-size: 20px;
 	margin: 0;
 	margin-top: 50px;
 }
 
-.backlog__item-difficulty{
+.task__difficulty{
 	text-align: center;
 }
 
-.backlog__item-points{
+.task__storypoints{
 	margin: 0;
 	text-align: center;
 	font-size: 24px;
@@ -177,9 +186,11 @@ body{
 
 .sprint__items-wrapper{
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	margin-bottom: 100px;
+	padding-left: 53px;
+	margin-right: -97px;
 }
 
 

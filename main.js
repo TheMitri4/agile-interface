@@ -5,9 +5,11 @@ function Agile() {
 Agile.prototype.addTask = function(task){
 	this.backlog.push(task);
 	var item = document.createElement('div');
-	item.classList.add('backlog__item');
-	item.innerHTML = `<h3 class="backlog__item-title">${task.title}</h3><p class="backlog__item-difficulty">Сложность:</p><p class="backlog__item-points">${task.storyPoints}</p>`;
+	item.classList.add('task');
+	item.classList.add('task__hidden');
+	item.innerHTML = `<h3 class="task__title">${task.title}</h3><p class="task__difficulty">Сложность:</p><p class="task__storypoints">${task.storyPoints}</p>`;
 	backlogItemsWrapper.appendChild(item);
+	setTimeout(function(){item.classList.remove('task__hidden');}, 20);
 };
 
 Agile.prototype.addUrgentTask = function(task){
@@ -17,7 +19,7 @@ Agile.prototype.addUrgentTask = function(task){
 Agile.prototype.getSprint = function(storyPoints){
 	var sprint = [];
 	var max = +storyPoints;
-	var backlogTasks = backlogItemsWrapper.querySelectorAll('.backlog__item');
+	var backlogTasks = backlogItemsWrapper.querySelectorAll('.task');
 	this.backlog = this.backlog.reduce((acc,item,i) => {
 		if(item.storyPoints <= max){
 			sprint.push(item);
@@ -44,13 +46,6 @@ var agile = new Agile;
 
 var backlogItemsWrapper = document.querySelector('.backlog__items-wrapper');
 var sprintItemsWrapper = document.querySelector('.sprint__items-wrapper');
-
-if(agile.backlog.length = 0){
-	backlogItemsWrapper.innerHTML = '';
-}
-
-
-
 var addTaskButton = document.querySelector('.addtask__button');
 var taskTitleInput = document.querySelector('.addtask__input[name="task-name"]');
 var taskStoryPoints = document.querySelector('.addtask__input[name="task-storypoints"]');
