@@ -83,5 +83,3 @@ getSprintButton.addEventListener('click', event => {
 
 
 
-
-
