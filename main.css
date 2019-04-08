@@ -109,6 +109,7 @@ body{
 	transition: opacity 0.8s, max-height 0.5s, min-height 0.5s;
 	margin-right: 97px;
 	margin-bottom: 20px;
+	position: relative;
 }
 
 .task__hidden{
@@ -132,6 +133,31 @@ body{
 	margin: 0;
 	text-align: center;
 	font-size: 24px;
+}
+
+.task__remove{
+	display: block;
+	background-image: url(img/icon-close.svg);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border: 0;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	opacity: 0.2;
+	transition: opacity 0.4s;
+}
+
+.task__remove:hover{
+	opacity: 0.6;
+}
+
+.task__remove:focus{
+	opacity: 0.6;
+	outline: none;
 }
 
 .addtask{
@@ -209,6 +235,8 @@ body{
 	padding-left: 53px;
 	margin-right: -97px;
 }
+
+
 
 
 
